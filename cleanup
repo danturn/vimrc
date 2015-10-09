@@ -1,0 +1,9 @@
+#!/usr/bin/env sh
+
+read -p 'Are you sure you want to delete all this vimage ? Ctrl-C is your only hope...' entry
+
+rm -rf ~/.vim
+rm ~/.vimrc
+rm ~/.viminfo
+rm ~/.vimrcold
+
