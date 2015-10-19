@@ -20,13 +20,9 @@ let g:syntastic_check_on_wq = 0
 let g:syntastic_elixir_checkers = ['elixir']
 let g:syntastic_enable_elixir_checker = 1
 
-" Toggle nerdtree with F10
 map <F10> :NERDTreeToggle<CR>
-" Current file in nerdtree
 map <F9> :NERDTreeFind<CR>
-" Run tests on F5
 map <F5> :!clear & mix test<CR>
-
 
 filetype plugin indent on    
 syntax on
@@ -54,9 +50,5 @@ let g:solarized_termtrans=1
 colorscheme solarized
 
 let g:lightline = { 'colorscheme': 'solarized'}
-"      \ 'component': {
-"      \   'readonly': '%{&readonly?"⭤":""}',
-"      \ },
-"      \ 'separator': { 'left': '⮀', 'right': '⮂' },
-"      \ 'subseparator': { 'left': '⮁', 'right': '⮃' }
-"      \ }
+filetype plugin on
+set omnifunc=syntaxcomplete#Complete
