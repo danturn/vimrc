@@ -5,20 +5,12 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'elixir-lang/vim-elixir'
 Plugin 'mattreduce/vim-mix'
-Plugin 'scrooloose/syntastic'
 Plugin 'scrooloose/nerdtree'
 Plugin 'kien/ctrlp.vim'
 Plugin 'itchyny/lightline.vim'
 Plugin 'altercation/vim-colors-solarized'
 
 call vundle#end()            
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-let g:syntastic_elixir_checkers = ['elixir']
-let g:syntastic_enable_elixir_checker = 1
 
 map <F10> :NERDTreeToggle<CR>
 map <F9> :NERDTreeFind<CR>
@@ -27,7 +19,6 @@ map <F5> :!clear & mix test<CR>
 filetype plugin indent on    
 syntax on
 set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
 set expandtab
