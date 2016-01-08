@@ -5,16 +5,14 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'elixir-lang/vim-elixir'
 Plugin 'mattreduce/vim-mix'
-Plugin 'scrooloose/nerdtree'
 Plugin 'kien/ctrlp.vim'
 Plugin 'itchyny/lightline.vim'
 Plugin 'altercation/vim-colors-solarized'
 
 call vundle#end()            
 
-map <F10> :NERDTreeToggle<CR>
-map <F9> :NERDTreeFind<CR>
 map <F5> :!clear & mix test<CR>
+map <F6> :!clear & elixir %<CR>
 
 filetype plugin indent on    
 syntax on
