@@ -13,6 +13,7 @@ call vundle#end()
 
 map <F5> :!clear & mix test<CR>
 map <F6> :!clear & elixir %<CR>
+inoremap jj <ESC>
 
 filetype plugin indent on    
 syntax on
