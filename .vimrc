@@ -4,6 +4,7 @@ call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'elixir-lang/vim-elixir'
+Plugin 'PProvost/vim-ps1'
 Plugin 'mattreduce/vim-mix'
 Plugin 'kien/ctrlp.vim'
 Plugin 'itchyny/lightline.vim'
