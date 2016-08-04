@@ -13,7 +13,7 @@ backup_home_vimrcpath=${home_vimrcpath}.old
 
 which readlink >/dev/null
 if [ $? -eq 0 ]; then
-  actual_home_vimrcpath=$(readlink "${actual_home_vimrcpath}")
+  actual_home_vimrcpath=$(readlink -f "${actual_home_vimrcpath}")
 fi
 
 if [ ! "${actual_home_vimrcpath}" -ef "${script_vimrcpath}" ]; then
@@ -49,7 +49,7 @@ call vundle#begin()
      echo "${source_line}" >"${home_vimrcpath}"
   else
     diff -q "${home_vimrcpath}" "${script_vimrcpath}" >/dev/null
-    $files_differ=$?
+    files_differ=$?
     if [ ${files_differ} -ne 0 ]; then
       grep "${source_line}" "${home_vimrcpath}" >/dev/null
       if [ $? -ne 0 ]; then
