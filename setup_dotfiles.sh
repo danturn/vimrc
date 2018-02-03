@@ -1,5 +1,4 @@
 #!/usr/bin/env sh
-
 if [ -z ${BASH_SOURCE} ]; then
   script_dir=$(readlink -f $(dirname "${0}"))
 else
