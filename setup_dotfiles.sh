@@ -71,4 +71,3 @@ call vundle#begin()
 else
   echo '.vimrc already pointing at this git repository.'
 fi
-
