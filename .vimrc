@@ -7,6 +7,7 @@ Plugin 'elixir-lang/vim-elixir'
 Plugin 'PProvost/vim-ps1'
 Plugin 'itchyny/lightline.vim'
 Plugin 'altercation/vim-colors-solarized'
+Plugin 'kien/ctrlp.vim'
 
 call vundle#end()            
 
