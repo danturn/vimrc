@@ -17,8 +17,10 @@ inoremap jj <ESC>
 
 filetype plugin indent on    
 syntax on
+set laststatus=2
 set statusline+=%#warningmsg#
 set statusline+=%*
+
 
 set expandtab
 set shiftwidth=2
@@ -40,9 +42,18 @@ let g:solarized_termtrans=1
 colorscheme solarized
 
 let g:lightline = { 'colorscheme': 'solarized'}
+let g:lightline = {
+      \   'component_function': {
+      \     'filename': 'LightLineFilename'
+      \   },
+      \   'colorscheme': 'solarized'
+      \ }
+function! LightLineFilename()
+    return expand('%')
+  endfunction
+
 filetype plugin on
 set omnifunc=syntaxcomplete#Complete
-
 set wildignore+=*/node_modules/*,*/deps/*,*/tmp/*,*.so,*.swp,*.zip
 let g:ctrlp_working_path_mode='ra'
 let g:ctrlp_cmd = 'CtrlPMixed'
