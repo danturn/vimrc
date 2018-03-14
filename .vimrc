@@ -58,3 +58,5 @@ set wildignore+=*/node_modules/*,*/deps/*,*/tmp/*,*.so,*.swp,*.zip
 let g:ctrlp_working_path_mode='ra'
 let g:ctrlp_cmd = 'CtrlPMixed'
 let g:ctrlp_by_filename = 1
+
+set iskeyword+=-
