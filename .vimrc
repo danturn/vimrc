@@ -2,12 +2,13 @@
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
+set rtp+=~/.fzf
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'elixir-lang/vim-elixir'
 Plugin 'PProvost/vim-ps1'
 Plugin 'itchyny/lightline.vim'
 Plugin 'altercation/vim-colors-solarized'
-Plugin 'kien/ctrlp.vim'
+Plugin 'junegunn/fzf.vim'
 
 call vundle#end()            
 
@@ -20,7 +21,6 @@ syntax on
 set laststatus=2
 set statusline+=%#warningmsg#
 set statusline+=%*
-
 
 set expandtab
 set shiftwidth=2
@@ -49,12 +49,10 @@ let g:lightline = {
       \   'colorscheme': 'solarized'
       \ }
 function! LightLineFilename()
-    return expand('%')
-  endfunction
+  return expand('%')
+endfunction
 
 filetype plugin on
 set omnifunc=syntaxcomplete#Complete
 set wildignore+=*/node_modules/*,*/deps/*,*/tmp/*,*.so,*.swp,*.zip
-let g:ctrlp_working_path_mode='ra'
-let g:ctrlp_cmd = 'CtrlPMixed'
-let g:ctrlp_by_filename = 1
+noremap <C-p> :Files<cr>
