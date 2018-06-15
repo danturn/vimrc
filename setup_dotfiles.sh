@@ -36,3 +36,5 @@ ln -s "${script_dir}"/.vimrc ~/.vimrc
 
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ~/.fzf/install --no-bash
+
+sudo apt-get install ack -y

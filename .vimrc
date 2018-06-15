@@ -56,3 +56,5 @@ filetype plugin on
 set omnifunc=syntaxcomplete#Complete
 set wildignore+=*/node_modules/*,*/deps/*,*/tmp/*,*.so,*.swp,*.zip
 noremap <C-p> :Files<cr>
+
+let $FZF_DEFAULT_COMMAND = 'ack -g ""'
