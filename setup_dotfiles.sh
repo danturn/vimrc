@@ -38,3 +38,6 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ~/.fzf/install --no-bash
 
 sudo apt-get install ack -y
+
+sudo npm i -g elm-format --unsafe-perm=true --allow-root
+sudo npm i -g elm-oracle
