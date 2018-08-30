@@ -9,6 +9,8 @@ Plugin 'PProvost/vim-ps1'
 Plugin 'itchyny/lightline.vim'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'junegunn/fzf.vim'
+Plugin 'pangloss/vim-javascript'
+Plugin 'mxw/vim-jsx'
 Plugin 'elmcast/elm-vim'
 
 call vundle#end()            
