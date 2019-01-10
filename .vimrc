@@ -5,35 +5,33 @@ call vundle#begin()
 set rtp+=~/.fzf
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'elixir-lang/vim-elixir'
-Plugin 'PProvost/vim-ps1'
 Plugin 'itchyny/lightline.vim'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'junegunn/fzf.vim'
 Plugin 'pangloss/vim-javascript'
-Plugin 'mxw/vim-jsx'
 Plugin 'elmcast/elm-vim'
 
-call vundle#end()            
+call vundle#end()
 
 map <F5> :!clear & mix test<CR>
 map <F6> :!clear & elixir %<CR>
 inoremap jj <ESC>
 
-filetype plugin indent on    
+filetype plugin indent on
 syntax on
 set laststatus=2
 set statusline+=%#warningmsg#
 set statusline+=%*
-
 set expandtab
 set shiftwidth=2
 set softtabstop=2
 set autowrite
+set autoread
 set incsearch
 set nocompatible
 set number
 set ttyfast
-set hlsearch 
+set hlsearch
 set laststatus=2
 set noshowmode
 
@@ -63,3 +61,5 @@ noremap <C-p> :Files<cr>
 let $FZF_DEFAULT_COMMAND = 'ack -g ""'
 
 autocmd BufWritePre * %s/\s\+$//e
+autocmd BufWritePost *.exs silent :!mix format %
+autocmd BufWritePost *.ex silent :!mix format %
