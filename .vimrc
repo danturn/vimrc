@@ -10,6 +10,7 @@ Plugin 'altercation/vim-colors-solarized'
 Plugin 'junegunn/fzf.vim'
 Plugin 'pangloss/vim-javascript'
 Plugin 'elmcast/elm-vim'
+Plugin 'mhinz/vim-mix-format'
 
 call vundle#end()
 
@@ -53,6 +54,9 @@ function! LightLineFilename()
   return expand('%')
 endfunction
 
+let g:mix_format_on_save = 1
+let g:mix_format_silent_errors = 1
+
 filetype plugin on
 set omnifunc=syntaxcomplete#Complete
 set wildignore+=*/node_modules/*,*/deps/*,*/tmp/*,*.so,*.swp,*.zip
@@ -61,5 +65,3 @@ noremap <C-p> :Files<cr>
 let $FZF_DEFAULT_COMMAND = 'ack -g ""'
 
 autocmd BufWritePre * %s/\s\+$//e
-autocmd BufWritePost *.exs silent :!mix format %
-autocmd BufWritePost *.ex silent :!mix format %
