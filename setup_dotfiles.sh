@@ -1,11 +1,11 @@
 #!/usr/bin/env sh
-sudo echo "a prompt for sudo" >/dev/null 
+sudo echo "a prompt for sudo" >/dev/null
 
 echo "Backing up .vimrc"
 [ -f ~/.vimrc ] && mv ~/.vimrc ~/.vimrc.old >/dev/null
 
 echo "Removing current vim configuration"
-rm -rf ~/.vim 
+rm -rf ~/.vim
 rm -f ~/.vimrc
 
 echo 'Installing Vundle - https://github.com/VundleVim/Vundle.vim'
@@ -22,7 +22,7 @@ echo """
      """  > "${script_dir}"/vimrctemp
 
 grep "Plugin '" .vimrc >> "${script_dir}"/vimrctemp
-echo 'call vundle#end()            
+echo 'call vundle#end()
 ' >> "${script_dir}"/vimrctemp
 
 ln -s "${script_dir}"/vimrctemp ~/.vimrc

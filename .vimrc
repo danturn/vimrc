@@ -65,3 +65,10 @@ noremap <C-p> :Files<cr>
 let $FZF_DEFAULT_COMMAND = 'ack -g ""'
 
 autocmd BufWritePre * %s/\s\+$//e
+
+silent !mkdir -p ~/.vim/undo
+set undofile
+set undodir=~/.vim/undo
+let s:undos = split(globpath(&undodir, '*'), "\n")
+call filter(s:undos, 'getftime(v:val) < localtime() - (60 * 60 * 24 * 90)')
+call map(s:undos, 'delete(v:val)')
