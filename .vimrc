@@ -10,7 +10,6 @@ Plugin 'altercation/vim-colors-solarized'
 Plugin 'junegunn/fzf.vim'
 Plugin 'pangloss/vim-javascript'
 Plugin 'elmcast/elm-vim'
-Plugin 'mhinz/vim-mix-format'
 
 call vundle#end()
 
@@ -53,9 +52,6 @@ let g:lightline = {
 function! LightLineFilename()
   return expand('%')
 endfunction
-
-let g:mix_format_on_save = 1
-let g:mix_format_silent_errors = 1
 
 filetype plugin on
 set omnifunc=syntaxcomplete#Complete
