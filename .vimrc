@@ -61,6 +61,8 @@ noremap <C-p> :Files<cr>
 let $FZF_DEFAULT_COMMAND = 'ack -g ""'
 
 autocmd BufWritePre * %s/\s\+$//e
+autocmd BufWritePost * doautocmd Syntax
+autocmd BufReadPost * doautocmd Syntax
 
 silent !mkdir -p ~/.vim/undo
 set undofile
