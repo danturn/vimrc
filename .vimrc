@@ -10,6 +10,8 @@ Plugin 'altercation/vim-colors-solarized'
 Plugin 'junegunn/fzf.vim'
 Plugin 'pangloss/vim-javascript'
 Plugin 'elmcast/elm-vim'
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-rhubarb'
 
 call vundle#end()
 
