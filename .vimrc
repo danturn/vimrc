@@ -71,6 +71,7 @@ let $FZF_DEFAULT_COMMAND = 'ack -g ""'
 autocmd BufWritePre * %s/\s\+$//e
 autocmd BufWritePost * doautocmd Syntax
 autocmd BufReadPost * doautocmd Syntax
+autocmd Filetype php setlocal expandtab shiftwidth=4 softtabstop=4
 
 silent !mkdir -p ~/.vim/undo
 set undofile
